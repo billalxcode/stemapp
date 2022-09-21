@@ -20,6 +20,10 @@ class SiswaMigrate extends Migration
                 'constraint' => 25,
                 'null' => false
             ],
+            'nik' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255
+            ],
             'user_id' => [
                 'type' => 'INT',
                 'constraint' => 5,
@@ -58,19 +62,25 @@ class SiswaMigrate extends Migration
                 'type' => 'INT',
                 'constraint' => 25,
                 'null' => false
+            ],
+            'created_at' => [
+                'type' => 'DATETIME'
+            ],
+            'updated_at' => [
+                'type' => 'DATETIME'
+            ],
+            'deleted_at' => [
+                'type' => 'DATETIME'
             ]
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('siswa');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('siswa', 'user_id');
-
         $this->forge->dropTable('siswa');
     }
 }

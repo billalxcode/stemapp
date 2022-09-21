@@ -62,15 +62,12 @@ class GuruMigrate extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'CASCADE');
 
         $this->forge->createTable('guru');
     }
 
     public function down()
     {
-        $this->forge->dropForeignKey('guru', 'user_id');
-
         $this->forge->dropTable('guru');
     }
 }

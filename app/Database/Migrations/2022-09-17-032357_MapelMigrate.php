@@ -34,6 +34,7 @@ class MapelMigrate extends Migration
             ]
         ]);
 
+        $this->forge->addKey('id');
         $this->forge->createTable('mapel');
     }
 

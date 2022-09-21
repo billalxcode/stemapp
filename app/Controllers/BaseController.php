@@ -59,4 +59,17 @@ abstract class BaseController extends Controller
     public function renderOnce($name) {
         return view($name, $this->context);
     }
+
+    public function set_breadchumb(string $name, string $link,bool $active) {
+        if (!isset($this->context['breadchumbs'])) {
+            $this->context['breadchumbs'] = [];
+        }
+
+        array_push($this->context['breadchumbs'], [
+            'name' => $name,
+            'link' => $link,
+            'active' => $active
+        ]);
+        return true;
+    }
 }

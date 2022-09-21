@@ -46,6 +46,10 @@ $routes->group("auth", function (RouteCollection $routes) {
 
 $routes->group('admin', ['filter' => 'adminfilter'], function (RouteCollection $routes) {
     $routes->get("", "Admin\Dashboard::index");
+
+    $routes->group("siswa", function (RouteCollection $routes) {
+        $routes->get("", "Admin\Siswa::index");
+    });
 });
 
 /*
