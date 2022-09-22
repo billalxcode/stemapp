@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/components.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/modules/datatables/datatables.min.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/modules/bootstrap-daterangepicker/daterangepicker.css') ?>">
 </head>
 
 <body>
@@ -46,6 +47,7 @@
     <script src="<?= base_url('assets/modules/jquery.sparkline.min.js') ?>"></script>
     <script src="<?= base_url('assets/modules/owlcarousel2/dist/owl.carousel.min.js') ?>"></script>
     <script src="<?= base_url('assets/modules/datatables/datatables.min.js') ?>"></script>
+    <script src="<?= base_url('assets/modules/bootstrap-daterangepicker/daterangepicker.js') ?>"></script>
     <script src="<?= base_url('assets/js/scripts.js') ?>"></script>
     <script src="<?= base_url('assets/js/custom.js') ?>"></script>
 

@@ -49,6 +49,7 @@ $routes->group('admin', ['filter' => 'adminfilter'], function (RouteCollection $
 
     $routes->group("siswa", function (RouteCollection $routes) {
         $routes->get("", "Admin\Siswa::index");
+        $routes->get("create", 'Admin\Siswa::create');
     });
 });
 
